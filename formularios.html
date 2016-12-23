@@ -8,6 +8,63 @@
 	<form action="" method="">
 		<!--Action es para enviar a un archivo lo que se ingrese en el formulario-->
 		<!--Method: para ingresar el metodo post y el metodo get-->
+		<label for="nombre">Nombre:</label>
+		<input type="text" id="nombre"placeholder="Nombre:" maxlength="10" required> <!--El type nos dice que tipo de atributo quieres, tipo texto, -->
+		<!--El value pone un escrito de lo que va a decir en el formulario-->
+		<!--placeholder es lo mismo que el value sirve para especificar los datos que lleva el campo, y se borran cuando quieras empezar a escribir.-->
+		<!--maxlength sirve para que tenga un limite de escritura en el formulario-->
+		<!--required Te pide que a fuerza llenes el campo-->
 	</form>
+	
+
+	<form action="">
+		<input type="submit" value="Enviar"> <!--Boton de enviar-->
+	</form>
+	<br>
+	
+
+	<form action="recibe.php">
+		<input type="text" disabled name="nombre"> 
+		<!--readonly solo nos permite leer el texto-->
+		<!--name permite guardar los atributos de name, esto se usa en php-->
+		<!--disabled desabilita el campo--> <br>
+		<input type="email" placeholder="Correo:" name="Correo">
+		<input type="submit" value="Enviar">
+		<!--email: permite que solo pongas una dirección de correo, si no, no aceptara que envíes nada.-->
+		<br>
+		<textarea name="Mensaje" id="mensaje" placeholder="Información"></textarea>
+		<br>
+		<label for="pais">Pais</label>
+		<!--Das click al texto y selecciona la etiqueta select para guiar e indicar al usuario el campo, el "for" del label siempre debe estar enlazado con un ID -->
+		<select name="pais" id="pais"> <!--Nos permite escoger una serie de opciones-->
+			<option value="mexico">Mexico</option>
+			<option value="espana">España</option>
+			<option value="argentina">Argentina</option>
+			<!--El value es lo que estamos enviando-->
+		</select>	
+
+		<input type="radio" name="genero" value="hombre" id="hombre"><label for="hombre">Hombre</label>
+		<input type="radio" name="genero" value="mujer" id="mujer"> <label for="mujer">Mujer</label>
+		<!--Siempre cuando en el "name" tengan el mismo valor solo podrán elegir una opción-->
+		<input type="submit" value="Enviar">
+
+		<br>
+
+		<input type="checkbox" name="terminos" id="terminos"> <label for="terminos">Terminos y condiciones.</label>
+		<input type="submit" value="Enviar">
+	</form>
+
+	<!--Type:
+	1-text , 2-email , 3-submit (botones), 4-radio(opciones)
+	-->
+
+	<!--Atributos:
+	1-name(lo que aparece en el text area) , 2-value(para los botones de enviar) , 3-id , 4-for(debe ser el mismo que el id) , 5-placeholder(correo) , 6-maxlength-->
+
+	<!--Atributos sin contenido:
+
+	1-required -->
+	<br>
+
 </body>
 </html>
